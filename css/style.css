@@ -168,6 +168,16 @@ a:focus-visible {
   background-color: var(--color-surface);
 }
 
+}
+
+.info-note {
+  max-width: var(--container-width);
+  margin: 0 auto var(--space-xl);
+  padding: var(--space-md);
+  border-left: 4px solid var(--color-primary);
+  background-color: var(--color-surface);
+}
+
 .info-note__title {
   margin-top: 0;
 }
@@ -404,6 +414,27 @@ a:focus-visible {
 }
 
 .product__specs thead th {
+   8. Каталог
+   =============================== */
+
+.catalog-layout {
+  max-width: var(--container-width);
+  margin: 0 auto var(--space-xl);
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-areas: "filters products";
+  gap: var(--space-lg);
+}
+
+.catalog-layout__products {
+  grid-area: products;
+}
+
+.catalog-filters {
+  grid-area: filters;
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
   background-color: var(--color-surface);
   font-weight: 700;
   color: var(--color-text);
@@ -411,6 +442,43 @@ a:focus-visible {
 
 .product__specs tbody tr:hover {
   background-color: var(--color-surface-accent);
+}
+
+.catalog-filters__title {
+  margin-top: 0;
+}
+
+.catalog-filters__form {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.catalog-filters__group {
+  margin: 0;
+  padding: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.catalog-filters__legend {
+  font-weight: 700;
+}
+
+.catalog-filters__label {
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.catalog-filters__checkbox {
+  width: auto;
+}
+
+.catalog-filters__input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font: inherit;
 }
 
 /* ===============================
@@ -477,6 +545,9 @@ a:focus-visible {
 
 /* ===============================
    10. Модальное окно и форма
+   =============================== */
+
+   9. Модальное окно и форма
    =============================== */
 
 .order-dialog {
@@ -548,6 +619,7 @@ a:focus-visible {
 
 /* ===============================
    11. Сообщение об успехе
+   10. Сообщение об успехе
    =============================== */
 
 .success-message {
@@ -594,4 +666,10 @@ a:focus-visible {
 .to-top:focus-visible {
   outline: 2px solid var(--color-white);
   outline-offset: 3px;
+   11. Подвал
+   =============================== */
+
+.site-footer {
+  padding: var(--space-lg);
+  background-color: var(--color-surface);
 }
