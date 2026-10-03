@@ -84,6 +84,12 @@ const current = products[id] || products['1'];
 // Меняем заголовок вкладки браузера.
 document.title = current.title + ' — Учебный интернет-магазин';
 
+// Обновляем хлебную крошку текущего товара.
+const breadcrumbEl = document.querySelector('.breadcrumbs__current');
+if (breadcrumbEl) {
+  breadcrumbEl.textContent = current.title;
+}
+
 // Находим элементы на странице.
 const titleEl = document.querySelector('.product__title');
 const descriptionEl = document.querySelector('.product__description');
